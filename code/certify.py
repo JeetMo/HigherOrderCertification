@@ -22,7 +22,7 @@ parser.add_argument("--start", type=int, default=0, help="start at this point of
 parser.add_argument("--split", choices=["train", "test"], default="test", help="train or test set")
 parser.add_argument("--N0", type=int, default=100)
 parser.add_argument("--N", type=int, default=200000, help="number of samples to use")
-parser.add_argument("--alpha", type=float, default=0.0005, help="failure probability")
+parser.add_argument("--alpha", type=float, default=0.001, help="failure probability")
 args = parser.parse_args()
 
 if __name__ == "__main__":

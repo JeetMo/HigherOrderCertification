@@ -82,7 +82,7 @@ class Smooth(object):
             radiusLInf /= np.sqrt(np.prod(x.shape))
             
             radiusOp = self.sigma * calculate_radius(pABar, meanBarOp)
-            pABar = self._lower_confidence_bound(nA, n, 2*alpha)
+            pABar = self._lower_confidence_bound(nA, n, alpha)
             radiusCohen = self.sigma * norm.ppf(pABar)
             return nA, maxC, meanC, meanR, meanG, meanB, cAHat, radiusR, radiusG, radiusB, radiusL1, radiusLInf, radiusL2, radiusOp, radiusCohen
 
